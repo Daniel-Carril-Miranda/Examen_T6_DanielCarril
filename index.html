@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nickelodeon</title>
+    <!-- Para que se carguen las fuentes más rápido con CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css" type="text/css">
+    <link rel="stylesheet" href="build/css/normalize.css" type="text/css">
 </head>
 <body>
-    
+    <header id="inicio" class="header">
+        <div class="contenedor contenido-header">
+            <span>
+                <img src="/build/img/Nickelodeon.png" alt="Nickelodeon">
+            </span>
+            <nav class="navegacion-principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#galeria">Personajes</a>
+            </nav>
+        </div>
+    </header>
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Bob Esponja</h2>
+                <p>La Fórmula Secreta</p>
+            </div>
+        </div>
+    <video autoplay loop> <!-- Añadir muted para que no se oiga -->
+        <source src="video/FormulaSecreta.mp4" type="video/mp4">
+        <source src="video/" type="video/ogg">
+        <source src="video/.webm" type="video/webm">
+    </video>
+    </div>
+    <div class="video-background">
+        <video autoplay muted loop id="video-background">
+            <source src="/video/fondo.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento <code>video</code>.
+        </video>
+    </div>
+    <section id="galeria" class="galeria contenedor">
+        <h3>Personajes</h3>
+        <ul class="galeria-imagenes"></ul>
+    </section>
+    <footer class="site-footer">
+        <p>© Nickelodeon <span id="year"></span></p>
+    </footer>
+    <script src="build/js/app.js"></script>
 </body>
 </html>
